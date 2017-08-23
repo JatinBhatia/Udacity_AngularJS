@@ -1,0 +1,12 @@
+<button class="btn btn-primary" (click)='logTheclick()'>DisplayDetails</button>
+<hr>
+<p *ngIf="visible">
+  Add a paragraph with any content of your choice 
+</p>
+<hr>
+<p *ngFor="let click of clickLog"
+    [ngStyle] = "{backgroundColor:  getcolor()}"
+    [ngClass] = "{textcolor: count>5}"
+>
+  Mouse is clicked {{click}} times!!
+</p>
